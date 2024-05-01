@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Guess My Number</title>
+        <!-- <link rel="stylesheet" href="../public/css/style.css" /> -->
+        <link rel="stylesheet" href="style.css">
+        <link
+            type="image/png"
+            sizes="32x32"
+            rel="icon"
+            href="icons/icons8-question-mark-cute-outline-32.png" />
+        <!-- <link rel="stylesheet" href="lightmode.css"> -->
+    </head>
+    <body>
+        <audio controls src="audio/error-5-199276.mp3" class="fail"></audio>
+        <audio
+            controls
+            src="audio/mixkit-animated-small-group-applause-523.wav"
+            class="win"></audio>
+        <audio
+            controls
+            src="audio/negative_beeps-6008.mp3"
+            class="game-over"></audio>
+        <div class="background">
+            <header>
+                <nav>
+                    <button class="btn retry">Again!</button>
+                    <p class="difficulty-info">
+                        (Between 1 and <span class="difficult">20</span>)
+                    </p>
+                </nav>
+                <h1>Guess My Number!</h1>
+                <div class="number">
+                    <div class="number__correct">?</div>
+                </div>
+            </header>
+            <main>
+                <section class="left">
+                    <input
+                        type="text"
+                        class="left__input"
+                        inputmode="numeric"
+                        pattern="[0-9\s]{13,19}" />
+
+                    <button class="btn left__btn-check">check!</button>
+                </section>
+                <!-- <section class="right">
+                    <div class="right__hints">
+                        <p>Start guessing...</p>
+                    </div>
+                    <div class="score-flex">
+                        <div class="right__score">
+                            💯 score: <span class="score">20</span>
+                        </div>
+                        <div class="right__high-score">
+                            🎖️ Highscore: <span class="high-score">0</span>
+                        </div>
+                    </div>
+                </section> -->
+                <section class="right">
+                    <article>
+                        <h2>Hints</h2>
+                        <ul class="hint-box"></ul>
+                    </article>
+                </section>
+                <section class="score">
+                    <!-- <div class="score__hints">
+                        <p>Start guessing...</p>
+                    </div> -->
+                    <div class="score-flex">
+                        <div class="right__score">
+                            💯 score: <span class="points">20</span>
+                        </div>
+                        <div class="right__high-score">
+                            🎖️ Highscore: <span class="high-score">0</span>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <div class="setting">
+                <div class="setting__title">
+                    <img src="icons/setting.svg" alt="" />
+                </div>
+                <div class="setting__panel">
+                    <div class="setting__panel__mode first">
+                        <p>Easy:</p>
+                        <div class="outer easy level">
+                            <div class="inner indicator level-inner"></div>
+                        </div>
+                    </div>
+                    <div class="setting__panel__mode">
+                        <p>Med:</p>
+                        <div class="outer medium level">
+                            <div class="inner indicator level-inner"></div>
+                        </div>
+                    </div>
+                    <div class="setting__panel__mode">
+                        <p>Hard:</p>
+                        <div class="outer hard level">
+                            <div class="inner indicator level-inner"></div>
+                        </div>
+                    </div>
+                    <div class="setting__panel__mode last">
+                        <p>Dark:</p>
+                        <div class="outer theme">
+                            <div class="inner indicator"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <script src="script.js"></script> -->
+        <script src="main.js"></script>
+    </body>
+</html>
